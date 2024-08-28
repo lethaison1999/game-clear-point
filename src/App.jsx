@@ -41,8 +41,8 @@ const App = () => {
     setGameWon(false)
   }
   const handleRemove = (itemPrev) => {
-    if (gameOver) return
     clearTimeout(setTimeRef)
+    if (gameOver) return
     const arrSetColor = arrayItem.map((item) => {
       if (item.id === itemPrev.id) {
         return {
@@ -63,7 +63,7 @@ const App = () => {
         const newArrCoordinate = arrayItem.filter((item) => item.id !== itemPrev.id)
         setPrevNumber(itemPrev.text)
         setArrayItem(newArrCoordinate)
-      }, 300)
+      }, 800)
     } else {
       setGameOver(true)
       clearInterval(timerRef.current)

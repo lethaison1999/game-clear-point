@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const CricleItem = ({ item, x, y, text, color = '#fff', onClickRemove }) => {
   return (
     <g
